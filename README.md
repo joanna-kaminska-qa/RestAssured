@@ -9,7 +9,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 ![Status: Completed](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-
 A professional API testing framework built with **RestAssured**, focused on scalability, clean code, and reusability.
 
 ## Tech Stack
@@ -18,7 +17,7 @@ A professional API testing framework built with **RestAssured**, focused on scal
 * **JUnit 5** (Test Runner)
 * **Hamcrest** (Advanced Assertions)
 * **Jackson Databind** (JSON Serialization/Deserialization)
-* **Gradle** (Build Tool
+* **Gradle** (Build Tool)
 
 ## Project Architecture
 The project follows industry-standard testing patterns:
@@ -34,6 +33,14 @@ The framework utilizes advanced Java features and matchers to ensure robust and 
 * **Hamcrest Matchers:** Instead of standard JUnit assertions, the project uses Hamcrest for "readable-as-English" assertions (`assertThat`, `is`, `hasItem`, `hasProperty`).
 * **Java Stream API:** Used for sophisticated data filtering and searching within large API responses (Lists of POJOs).
 * **Collection Validation:** Efficiently verifying the existence of specific data within collections without manual loops.
+
+## Data-Driven Testing & Security
+To maximize test coverage and simulate real-world scenarios, the framework implements:
+
+* **JUnit 5 Parameterized Tests:** Using `@ValueSource` for quick multi-scenario execution and `@CsvFileSource` for large-scale data sets stored in external `.csv` files.
+* **External Data Management:** Separation of test logic from data by reading resources from `src/test/resources`.
+* **API Security & Authentication:** Implementation of various auth methods, including **OAuth2 (Bearer Tokens)** and **Query Parameters** (e.g., `authuser`) identified via **Chrome DevTools** network analysis.
+* **Log-driven Debugging:** Using `.log().uri()` and `.log().all()` to verify dynamic URL construction and header integrity.
 
 ## Testing Scope
 * **Full CRUD Lifecycle:** Comprehensive tests for GET, POST, PUT, PATCH, and DELETE methods.
