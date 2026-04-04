@@ -41,6 +41,7 @@ To maximize test coverage and simulate real-world scenarios, the framework imple
 * **External Data Management:** Separation of test logic from data by reading resources from `src/test/resources`.
 * **API Security & Authentication:** Implementation of various auth methods, including **OAuth2 (Bearer Tokens)** and **Query Parameters** (e.g., `authuser`) identified via **Chrome DevTools** network analysis.
 * **Log-driven Debugging:** Using `.log().uri()` and `.log().all()` to verify dynamic URL construction and header integrity.
+* **Nested Object Validation:** Verification of deep JSON structures (e.g., User -> Address -> Zipcode) using Java Stream API and Hamcrest matchers.
 
 ## Testing Scope
 * **Full CRUD Lifecycle:** Comprehensive tests for GET, POST, PUT, PATCH, and DELETE methods.

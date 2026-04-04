@@ -9,6 +9,15 @@ public class User {
     String name;
     String username;
     String email;
+    Address address;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     public User() {}
     public User(int id, String name, String username, String email) {
