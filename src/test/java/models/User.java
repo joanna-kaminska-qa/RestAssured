@@ -6,10 +6,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class User {
 
     int id;
-    String name;
-    String username;
-    String email;
-    Address address;
+    private String name;
+    private String username;
+    private String email;
+    private Address address;
+    private Company company;
+    private String website;
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompanyName(Company companyName) {
+        this.company = companyName;
+    }
 
     public Address getAddress() {
         return address;

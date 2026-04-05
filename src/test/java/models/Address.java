@@ -7,6 +7,15 @@ public class Address {
 
     String city;
     String zipcode;
+    Geo geo;
+
+    public Geo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(Geo geo) {
+        this.geo = geo;
+    }
 
     public String getZipcode() {
         return zipcode;

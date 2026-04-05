@@ -33,6 +33,8 @@ The framework utilizes advanced Java features and matchers to ensure robust and 
 * **Hamcrest Matchers:** Instead of standard JUnit assertions, the project uses Hamcrest for "readable-as-English" assertions (`assertThat`, `is`, `hasItem`, `hasProperty`).
 * **Java Stream API:** Used for sophisticated data filtering and searching within large API responses (Lists of POJOs).
 * **Collection Validation:** Efficiently verifying the existence of specific data within collections without manual loops.
+* **Multi-level POJO Mapping:** Built complex data structures (e.g., `User` -> `Address` -> `Geo`) to validate deeply nested JSON responses.
+* **Data Type Transformation:** Implementing on-the-fly parsing (e.g., `String` to `Double`) to perform mathematical validations on API data, such as verifying geographic coordinates.
 
 ## Data-Driven Testing & Security
 To maximize test coverage and simulate real-world scenarios, the framework implements:
